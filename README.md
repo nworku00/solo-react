@@ -3,8 +3,8 @@ This app has game search funcitonality, you can then add those games to your "Pl
 
 This app is for people who have multiple games across multiple systems and those who have an issue with starting tons of games and never finishing them
 ## WireFrames
-<img src="/public/wireframes/20230523_112046.jpg" alt="Wireframe 1" height=100px>
-<img src="/public/wireframes/20230523_112309.jpg" alt="Wirefarme 2" height=100px>
+<img src="/public/wireframes/20230523_112046.jpg" alt="Wireframe 1" height=300px>
+<img src="/public/wireframes/20230523_112309.jpg" alt="Wirefarme 2" height=300px>
 ### Api
 Video Game Database API
 `https://api.rawg.io/docs/`
