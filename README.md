@@ -1,5 +1,6 @@
 ## The Play List
-This app has game search funcitonality, you can then add those games to your "Play List", and/or to your "Completed List", then rate those games
+This app has game search funcitonality, you can then add those games to your "Play List", and/or to your "Completed List", then rate those games.
+
 This app is for people who have multiple games across multiple systems and those who have an issue with starting tons of games and never finishing them
 ### Api
 Video Game Database API
