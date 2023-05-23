@@ -1,23 +1,28 @@
 import { useState } from "react"; 
 import FindIcon from "./FindIcon";
-const Playing = () => {
-    const [finishedGames, setFInishedGames] = useState([]);
+const Playing = ({games, moveToFinished}) => {
     const style = {
-        color: "lightblue",
-        fontSize: "25px",
+        display: "flex",
+        flexDirection: "column",
+        marginLeft: "200px",
+        justifyContent: "center",
+        textAlign:'center'
     };
+    const headerStyle = {
+        fontSize: "35px",
+    }
     return (
-        <div style={style}>
-            <h2> Games to Play</h2>
-            {finishedGames.map((finishedGame) => (
+        < div style={style}>
+            <h2 style = {headerStyle}> Games to Play</h2>
+            {games.map((game) => (
                 <FindIcon
-                    name={finishedGame.name}
-                    cover={finishedGame.background_image}
-                    rating={finishedGame.rating}
-                    whichList={'finishedList'}
+                    name={game.name}
+                    cover={game.background_image}
+                    rating={game.rating}
+                    whichList={'playList'}
+                    handleAdd={() => moveToFinished(game)}
                 />
             ))}
-            <FindIcon />
         </div>
     );
 }

@@ -1,16 +1,17 @@
 import { Button } from "@mui/material";
-const FindIcon = ({ name, cover, rating, genre, whichList }) => {
+const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd }) => {
     const style = {
         display: "flex",
+        flexWrap:"wrap",
         marginTop: "20px",
         marginBottom: "20px",
-        border: '5px solid black'
+        border: '5px solid black',
+        width:'80%'
     };
     const iconStyle = {
         display: 'flex',
         flexDirection: 'column',
         textAlign: 'center',
-        flexGrow: '1',
         marginLeft: "20px",
         marginRight: "10px",
     };
@@ -22,11 +23,11 @@ const FindIcon = ({ name, cover, rating, genre, whichList }) => {
     };
     const buttonRender = () => {
         if (whichList === 'findList') {
-            return <Button variant="contained">Add to Play List</Button>
+            return <Button variant="contained" onClick={handleAdd}>Add to Play List</Button>
         } else if ( whichList  === 'playList') {
-            return <Button variant="contained">Add to Completed List</Button>
+            return <Button variant="contained" onClick={handleAdd}>Add to Completed List</Button>
         } else {
-            return <Button variant="contained">Rate this Game</Button>
+            return <Button variant="contained" onClick={handleAdd}>Rate this Game</Button>
         }
     }
     return (

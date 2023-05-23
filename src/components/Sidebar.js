@@ -1,5 +1,6 @@
 import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
+import styles from "./SearchIcon.module.css";
 
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import SearchIcon from '@mui/icons-material/Search';
@@ -13,7 +14,7 @@ const Side = (props) => {
     const style = {
         position: "absolute",
         left: '0px',
-        height: "100vh"
+        height: "2000vh"
     }
     const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
     return (
