@@ -31,8 +31,8 @@ const Side = (props) => {
                     <MenuItem icon= {< AssignmentIcon/>}> Sign Up </MenuItem>
                 </SubMenu>
                 <MenuItem icon={<SearchIcon />} component={<Link to="/find" />}> Find Game</MenuItem>
-                <MenuItem icon = {<CheckIcon />}> Completed Games </MenuItem>
-                <MenuItem icon = {<HourglassBottomIcon/>}> Games to Play</MenuItem>
+                <MenuItem icon = {<HourglassBottomIcon/>} component={<Link to="/playing" />}> Games to Play</MenuItem>
+                <MenuItem icon = {<CheckIcon />} component={<Link to="/finished" />}> Finished Games </MenuItem>
             </Menu>
         </Sidebar>
     );

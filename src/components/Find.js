@@ -1,27 +1,29 @@
 import { useState, useEffect } from "react";
 import FindIcon from "./FindIcon";
-import SearchIcon from '@mui/icons-material/Search';
-const Find = ({ }) => {
+import styles from "./SearchIcon.module.css";
+
+import SearchIcon from "@mui/icons-material/Search";
+const Find = ({}) => {
     const style = {
         display: "flex",
-        flexDirection: 'column',
-        marginLeft: '200px',
-        justifyContent:'center'
-    }
+        flexDirection: "column",
+        marginLeft: "200px",
+        justifyContent: "center",
+    };
     const formStyle = {
         display: "flex",
-        justifyContent: "center"
-    }
+        justifyContent: "center",
+    };
     const barStyle = {
-        padding:"10px",
-        fontSize: '30px',
-        borderRadius: "20px",
-    }
+        padding: "10px",
+        fontSize: "25px",
+        borderRadius: "10px",
+    };
+
     const [games, setGames] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
-
-    const url = `https://api.rawg.io/api/games?key=8d5ea0349c9e41fc921cceb8964b0ed0&search=${searchInput}`
+    const url = `https://api.rawg.io/api/games?key=8d5ea0349c9e41fc921cceb8964b0ed0&search=${searchInput}`;
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
@@ -38,15 +40,19 @@ const Find = ({ }) => {
             <form onSubmit={handleSubmit} style={formStyle}>
                 <input
                     type="text"
-                    placeholder= "Search"
+                    placeholder="Search"
                     value={searchInput}
                     onChange={handleChange}
-                    style = {barStyle}
+                    style={barStyle}
                 />
-                <SearchIcon sx={{ fontSize: 60 }} onClick={ handleSubmit } />
+                <SearchIcon
+                    sx={{ fontSize: 60 }}
+                    onClick={handleSubmit}
+                    className={styles.searchIcon}
+                />
             </form>
             {games.map((game) => (
-                <FindIcon name={game.name} cover={game.background_image} rating={game.rating} />
+                <FindIcon name={game.name} cover={game.background_image} rating={game.rating} whichList={'findList'}/>
             ))}
         </div>
     );

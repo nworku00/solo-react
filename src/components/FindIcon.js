@@ -1,12 +1,18 @@
-const FindIcon = ({ name, cover, rating, genre }) => {
+import { Button } from "@mui/material";
+const FindIcon = ({ name, cover, rating, genre, whichList }) => {
     const style = {
         display: "flex",
-        flexWrap: "wrap",
         marginTop: "20px",
         marginBottom: "20px",
+        border: '5px solid black'
     };
     const iconStyle = {
-        marginLeft: "10px",
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'center',
+        flexGrow: '1',
+        marginLeft: "20px",
+        marginRight: "10px",
     };
     const imgBoxStyle = {
         height: "200px",
@@ -14,6 +20,15 @@ const FindIcon = ({ name, cover, rating, genre }) => {
         position: " relative",
         overflow: "hidden",
     };
+    const buttonRender = () => {
+        if (whichList === 'findList') {
+            return <Button variant="contained">Add to Play List</Button>
+        } else if ( whichList  === 'playList') {
+            return <Button variant="contained">Add to Completed List</Button>
+        } else {
+            return <Button variant="contained">Rate this Game</Button>
+        }
+    }
     return (
         <div style={style}>
             <div style={imgBoxStyle}>
@@ -21,9 +36,11 @@ const FindIcon = ({ name, cover, rating, genre }) => {
             </div>
             <div style={iconStyle}>
                 <h3>{name}</h3>
-                <p>{rating}</p>
+                <p>Rating: {rating}</p>
                 <p>{genre}</p>
-                <p>Add to list</p>
+            {
+                buttonRender()
+            }
             </div>
         </div>
     );

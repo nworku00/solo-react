@@ -1,0 +1,8 @@
+.searchIcon {
+        color:white;
+        background-color: blue;
+        border-radius: 10px;
+}
+.searchIcon:active {
+    background-color: gray;
+}
