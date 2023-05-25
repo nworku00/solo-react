@@ -8,9 +8,10 @@ const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
     const style = {
         display: "flex",
         flexDirection: "column",
-        marginLeft: "100px",
+        marginLeft: "150px",
         marginRight: "150px",
         justifyContent: "center",
+        textAlign:'center'
     };
     const formStyle = {
         display: "flex",
@@ -20,6 +21,9 @@ const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
         fontSize: "25px",
         borderRadius: "10px",
     };
+    const headerStyle ={
+        fontSize:"35px"
+    }
     const handleSearchInput = (e) => {
         setSearchInput(e.target.value);
     };
@@ -32,7 +36,7 @@ const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
     };
     return (
         <div style={style}>
-                <h1>Find Games</h1>
+                <h1 style = {headerStyle}>Find Games</h1>
             <form style={formStyle} onSubmit={handleSearch}>
                 <input
                     type="text"

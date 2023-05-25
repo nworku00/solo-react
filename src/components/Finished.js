@@ -4,7 +4,8 @@ const Finished = ({games}) => {
     const style = {
         display: "flex",
         flexDirection: "column",
-        marginLeft: "100px",
+        marginLeft: "120px",
+        marginRight: "150px",
         justifyContent: "center",
         textAlign:'center'
     };

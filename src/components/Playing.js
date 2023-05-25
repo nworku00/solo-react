@@ -4,9 +4,10 @@ const Playing = ({games, moveToFinished, removeGame}) => {
     const style = {
         display: "flex",
         flexDirection: "column",
-        marginLeft: "100px",
+        marginLeft: "150px",
         justifyContent: "center",
-        textAlign:'center'
+        textAlign: 'center',
+        marginRight: "150px",
     };
     const headerStyle = {
         fontSize: "45px",
