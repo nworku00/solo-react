@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/solo-react/static/css/main.eaae41c4.css",
-    "main.js": "/solo-react/static/js/main.355c3cca.js",
+    "main.css": "/solo-react/static/css/main.41ec669c.css",
+    "main.js": "/solo-react/static/js/main.7992406e.js",
     "static/js/787.3b9f5217.chunk.js": "/solo-react/static/js/787.3b9f5217.chunk.js",
     "static/media/logo-no-background.png": "/solo-react/static/media/logo-no-background.1823c24c73f3032cf98a.png",
     "index.html": "/solo-react/index.html",
-    "main.eaae41c4.css.map": "/solo-react/static/css/main.eaae41c4.css.map",
-    "main.355c3cca.js.map": "/solo-react/static/js/main.355c3cca.js.map",
+    "main.41ec669c.css.map": "/solo-react/static/css/main.41ec669c.css.map",
+    "main.7992406e.js.map": "/solo-react/static/js/main.7992406e.js.map",
     "787.3b9f5217.chunk.js.map": "/solo-react/static/js/787.3b9f5217.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eaae41c4.css",
-    "static/js/main.355c3cca.js"
+    "static/css/main.41ec669c.css",
+    "static/js/main.7992406e.js"
   ]
 }
