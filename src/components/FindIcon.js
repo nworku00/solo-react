@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
-const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd, handleAdd2, removeGame }) => {
+const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd, handleAdd2, removeGame, removeFinishedGame }) => {
     const [personalRating, setPersonalRating] = useState('')
     const style = {
         display: "flex",
@@ -43,7 +43,10 @@ const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd, handleAdd2
             <Button variant="contained" onClick={removeGame}>Remove Game</Button>
             </>
         } else {
-            return <Dropdown handlePersonalRating={handlePersonalRating}/>
+            return <>
+                <Button variant="contained" onClick={removeFinishedGame}>Remove Game</Button>
+                <Dropdown handlePersonalRating={handlePersonalRating} />
+            </>
         }
     }
     return (

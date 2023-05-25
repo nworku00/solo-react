@@ -1,8 +1,23 @@
 .searchIcon {
-        color:white;
-        background-color: blue;
-        border-radius: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
 }
 .searchIcon:active {
     background-color: gray;
+}
+.shelf {
+    border: 2px solid black;
+    background-color: lime;
+    margin: 2px;
+    width: 40px;
+    rotate:90deg;
+}
+.shelf:hover {
+    z-index: 99;
+    scale:110%;
+    transform: translateX(5px) translateY(3px);
+}
+.title {
+    
 }

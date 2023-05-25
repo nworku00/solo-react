@@ -3,6 +3,7 @@ import Side from "./Sidebar";
 import Find from "./Find";
 import Finished from "./Finished";
 import Playing from "./Playing";
+
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./Home";
@@ -29,6 +30,9 @@ const Main = () => {
     };
     const removeGame = (game) => {
         setPlayingGames(playingGames.filter((g) => g.id !== game.id));
+    }
+    const removeFinishedGame = (game) => {
+        setFinishedGames(finishedGames.filter((g) => g.id !== game.id));
     }
     const style = {
                display: "flex",
@@ -58,7 +62,8 @@ const Main = () => {
                         removeGame={removeGame}
                     />}
                 />
-                <Route path="/finished" element={<Finished games={finishedGames} />} />
+                <Route path="/finished" element={<Finished games={finishedGames} removeFinishedGame={removeFinishedGame}/>} />
+                <Route path="/shelf" element={<Shelf/>} />
             </Routes>
         </div>
     );

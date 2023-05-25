@@ -15,8 +15,9 @@ const Playing = ({games, moveToFinished, removeGame}) => {
     return (
         < div style={style}>
             <h2 style = {headerStyle}> Games to Play</h2>
-            {games.map((game) => (
+            {games.map((game,index) => (
                 <FindIcon
+                    key={ index}
                     name={game.name}
                     cover={game.background_image}
                     rating={game.rating}

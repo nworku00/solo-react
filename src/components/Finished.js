@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FindIcon from "./FindIcon";
-const Finished = ({games}) => {
+const Finished = ({games, removeFinishedGame}) => {
     const style = {
         display: "flex",
         flexDirection: "column",
@@ -15,12 +15,14 @@ const Finished = ({games}) => {
     return (
         <div style={style}>
             <h2 style = {headerStyle}>Finished Games</h2>
-            {games.map((finishedGame) => (
+            {games.map((finishedGame, index) => (
                 <FindIcon
+                    key={ index}
                     name={finishedGame.name}
                     cover={finishedGame.background_image}
                     rating={finishedGame.rating}
                     whichList={'finishedList'}
+                    removeFinishedGame={() => removeFinishedGame(finishedGame)}
                 />
             ))}
         </div>

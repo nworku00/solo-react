@@ -51,8 +51,8 @@ const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
                     className={styles.searchIcon}
                 />
             </form>
-            {games.map((game) => (
-                <FindIcon name={game.name} cover={game.background_image} rating={game.rating} whichList={'findList'} handleAdd={() => moveToPlaying(game)} handleAdd2={() => moveToFinished2(game)} />
+            {games.map((game, index) => (
+                <FindIcon key={ index} name={game.name} cover={game.background_image} rating={game.rating} whichList={'findList'} handleAdd={() => moveToPlaying(game)} handleAdd2={() => moveToFinished2(game)} />
             ))}
         </div>
     );
