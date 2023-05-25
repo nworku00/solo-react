@@ -4,7 +4,7 @@ const Playing = ({games, moveToFinished, removeGame}) => {
     const style = {
         display: "flex",
         flexDirection: "column",
-        marginLeft: "200px",
+        marginLeft: "100px",
         justifyContent: "center",
         textAlign:'center'
     };

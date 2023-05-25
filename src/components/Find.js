@@ -8,7 +8,7 @@ const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
     const style = {
         display: "flex",
         flexDirection: "column",
-        marginLeft: "200px",
+        marginLeft: "100px",
         marginRight: "150px",
         justifyContent: "center",
     };

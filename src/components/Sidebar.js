@@ -16,11 +16,12 @@ const Side = (props) => {
     const style = {
         position: "absolute",
         left: '0px',
-        height: "2000vh"
+        height: "2000vh",
+         
     }
-    const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
+    const { collapseSidebar, toggleSidebar, collapsed, defaultCollapsed, toggled, broken, rtl } = useProSidebar();
     return (
-        <Sidebar style={style}>
+        <Sidebar style={style} defaultCollapsed={true}>
             <Menu >
                 <MenuItem
                     icon={<MenuOutlinedIcon />}
