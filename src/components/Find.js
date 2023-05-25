@@ -32,7 +32,7 @@ const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
     };
     return (
         <div style={style}>
-                <h2>Find Games</h2>
+                <h1>Find Games</h1>
             <form style={formStyle} onSubmit={handleSearch}>
                 <input
                     type="text"
