@@ -3,12 +3,13 @@ import FindIcon from "./FindIcon";
 import styles from "./SearchIcon.module.css";
 
 import SearchIcon from "@mui/icons-material/Search";
-const Find = ({ games, setGames, moveToPlaying }) => {
+const Find = ({ games, setGames, moveToPlaying, moveToFinished2 }) => {
     const [searchInput, setSearchInput] = useState("");
     const style = {
         display: "flex",
         flexDirection: "column",
         marginLeft: "200px",
+        marginRight: "150px",
         justifyContent: "center",
     };
     const formStyle = {
@@ -32,7 +33,7 @@ const Find = ({ games, setGames, moveToPlaying }) => {
     return (
         <div style={style}>
                 <h2>Find Games</h2>
-            <form style={formStyle}>
+            <form style={formStyle} onSubmit={handleSearch}>
                 <input
                     type="text"
                     placeholder="Search"
@@ -47,7 +48,7 @@ const Find = ({ games, setGames, moveToPlaying }) => {
                 />
             </form>
             {games.map((game) => (
-                <FindIcon name={game.name} cover={game.background_image} rating={game.rating} whichList={'findList'} handleAdd={() => moveToPlaying(game)} />
+                <FindIcon name={game.name} cover={game.background_image} rating={game.rating} whichList={'findList'} handleAdd={() => moveToPlaying(game)} handleAdd2={() => moveToFinished2(game)} />
             ))}
         </div>
     );

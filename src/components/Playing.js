@@ -1,6 +1,6 @@
 import { useState } from "react"; 
 import FindIcon from "./FindIcon";
-const Playing = ({games, moveToFinished}) => {
+const Playing = ({games, moveToFinished, removeGame}) => {
     const style = {
         display: "flex",
         flexDirection: "column",
@@ -21,6 +21,7 @@ const Playing = ({games, moveToFinished}) => {
                     rating={game.rating}
                     whichList={'playList'}
                     handleAdd={() => moveToFinished(game)}
+                    removeGame={() => removeGame(game)}
                 />
             ))}
         </div>
