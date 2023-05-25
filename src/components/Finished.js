@@ -9,7 +9,7 @@ const Finished = ({games}) => {
         textAlign:'center'
     };
     const headerStyle = {
-        fontSize: "35px",
+        fontSize: "45px",
     }
     return (
         <div style={style}>

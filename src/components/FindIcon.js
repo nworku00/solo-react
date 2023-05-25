@@ -1,5 +1,8 @@
 import { Button } from "@mui/material";
-const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd , handleAdd2, removeGame }) => {
+import Dropdown from "./Dropdown";
+import { useState } from "react";
+const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd, handleAdd2, removeGame }) => {
+    const [personalRating, setPersonalRating] = useState('')
     const style = {
         display: "flex",
         flexWrap:"wrap",
@@ -22,6 +25,12 @@ const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd , handleAdd
         position: " relative",
         overflow: "hidden",
     };
+    const rateStyle = {
+        marginBottom:'-5px'
+    }
+    const handlePersonalRating = (e) => {
+        setPersonalRating(e.target.value)
+    }
     const buttonRender = () => {
         if (whichList === 'findList') {
             return <>
@@ -34,7 +43,7 @@ const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd , handleAdd
             <Button variant="contained" onClick={removeGame}>Remove Game</Button>
             </>
         } else {
-            return <Button variant="contained" onClick={handleAdd}>Rate this Game</Button>
+            return <Dropdown handlePersonalRating={handlePersonalRating}/>
         }
     }
     return (
@@ -43,8 +52,9 @@ const FindIcon = ({ name, cover, rating, genre, whichList, handleAdd , handleAdd
                 <img src={cover} alt="cover" width="100%" height="100%" object-fit="cover" />
             </div>
             <div style={iconStyle}>
-                <h3>{name}</h3>
-                <p>Rating: {rating}</p>
+                <h3 style={rateStyle}>{name}</h3>
+                <p style={rateStyle}>Rating: {rating}</p>
+                <p style={rateStyle}>Personal Rating: {personalRating}</p>
                 <p>{genre}</p>
             {
                 buttonRender()
