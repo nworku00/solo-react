@@ -38,7 +38,7 @@ const Main = () => {
         <div style={style}>
             <Side />
             <Routes>
-                <Route path="/" element={<Home /> } />
+                <Route path="/*" element={<Home /> } />
                 <Route
                     path="/find"
                     element={
